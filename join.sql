@@ -16,7 +16,8 @@ JOIN users u2 ON t."recipientId" = u2.id
 ORDER BY t.id;
 
 -- (3) Utilizando uma query, obtenha todos os cursos (courses) que o usuário com id 30 
--- já finalizou, incluindo o nome da escola. O que indica que um usuário terminou um curso é o campo status da tabela educations, que deve estar como "finished".
+-- já finalizou, incluindo o nome da escola. O que indica que um usuário terminou um curso 
+-- é o campo status da tabela educations, que deve estar como "finished".
 
 SELECT e."userId" AS id, u.name, c.name AS course, s.name AS school, "endDate"  FROM educations e
 JOIN users u ON e."userId" = u.id
